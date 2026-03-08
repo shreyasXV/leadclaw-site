@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadClaw — AI-Powered Leads That Convert</title>
+    <meta name="description" content="We find people actively looking for your services and deliver them to your inbox. No ad spend. No SEO waiting game. Just warm leads.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦞</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        /* Nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+        }
+        .nav-logo span { color: #e74c3c; }
+        .nav-cta {
+            background: #e74c3c;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(231, 76, 60, 0.12);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+            color: #e74c3c;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 span { color: #e74c3c; }
+        .hero p {
+            font-size: 20px;
+            color: #8899aa;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .hero-cta:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(231, 76, 60, 0.3);
+        }
+        .hero-sub {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* How it works */
+        .how {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        .how h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .step {
+            background: #111;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+        .step:hover { border-color: #e74c3c; }
+        .step-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        .step h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .step p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Verticals */
+        .verticals {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+            text-align: center;
+        }
+        .verticals h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .verticals .sub {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .tag {
+            background: #111;
+            border: 1px solid #222;
+            color: #aaa;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Pricing */
+        .pricing {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        .pricing h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .pricing .sub {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .plan {
+            background: #111;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 35px;
+            position: relative;
+        }
+        .plan.featured {
+            border-color: #e74c3c;
+            background: linear-gradient(135deg, #111 0%, #1a1020 100%);
+        }
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e74c3c;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .plan h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .plan .price {
+            font-size: 40px;
+            font-weight: 800;
+            color: #e74c3c;
+            margin-bottom: 4px;
+        }
+        .plan .price span {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+        .plan .desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .plan ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .plan li {
+            padding: 8px 0;
+            color: #999;
+            font-size: 14px;
+        }
+        .plan li::before {
+            content: "✓ ";
+            color: #2ecc71;
+            font-weight: 700;
+        }
+        .plan-btn {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .plan-btn-primary {
+            background: #e74c3c;
+            color: #fff;
+        }
+        .plan-btn-primary:hover { background: #c0392b; }
+        .plan-btn-secondary {
+            background: transparent;
+            color: #e74c3c;
+            border: 1px solid #e74c3c;
+        }
+        .plan-btn-secondary:hover { background: rgba(231, 76, 60, 0.1); }
+
+        /* CTA */
+        .final-cta {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+        .final-cta h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            color: #8899aa;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #333;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .steps, .plans { grid-template-columns: 1fr; }
+            nav { padding: 16px 20px; }
+            .hero, .how, .verticals, .pricing { padding-left: 20px; padding-right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">🦞 Lead<span>Claw</span></div>
+        <a href="#pricing" class="nav-cta">Get Started</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">🔥 AI-Powered Lead Generation</div>
+        <h1>We Find Your Next Clients <span>Before They Find You</span></h1>
+        <p>Our AI scans Reddit, forums, directories, and social media to find people actively looking for your services — and delivers them to your inbox every week.</p>
+        <a href="#pricing" class="hero-cta">See Your Free Leads →</a>
+        <div class="hero-sub">No credit card required. See real leads before you pay.</div>
+    </section>
+
+    <section class="how">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">🔍</div>
+                <h3>We Scan Everything</h3>
+                <p>Our AI monitors Reddit, Quora, directories, social media, and review sites 24/7 for people who need your services.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">🎯</div>
+                <h3>We Filter & Qualify</h3>
+                <p>Not every post is a lead. We use AI to identify real intent — people who are actively looking, not just browsing.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">📧</div>
+                <h3>You Get Warm Leads</h3>
+                <p>Every week, you receive a curated list of qualified leads with context — what they need, where they posted, how to reach them.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="verticals">
+        <h2>Built For Service Businesses</h2>
+        <p class="sub">We find leads wherever your potential clients are asking for help</p>
+        <div class="tags">
+            <div class="tag">⚖️ Immigration Lawyers</div>
+            <div class="tag">🏥 Personal Injury Attorneys</div>
+            <div class="tag">🦷 Dentists</div>
+            <div class="tag">💉 Med Spas</div>
+            <div class="tag">❄️ HVAC Companies</div>
+            <div class="tag">🏠 Real Estate Agents</div>
+            <div class="tag">📊 Accountants / CPAs</div>
+            <div class="tag">🐾 Veterinarians</div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Simple Pricing</h2>
+        <p class="sub">Start with a free preview. Scale when you're ready.</p>
+        <div class="plans">
+            <div class="plan">
+                <h3>Starter</h3>
+                <div class="price">$299<span>/mo</span></div>
+                <div class="desc">Perfect for solo practitioners</div>
+                <ul>
+                    <li>15 qualified leads/week</li>
+                    <li>1 city coverage</li>
+                    <li>1 practice area</li>
+                    <li>Weekly email delivery</li>
+                    <li>Lead context & intent data</li>
+                </ul>
+                <a href="mailto:hello@leadclaw.shop?subject=Interested in Starter Plan" class="plan-btn plan-btn-secondary">Get Started</a>
+            </div>
+            <div class="plan featured">
+                <div class="plan-badge">Most Popular</div>
+                <h3>Growth</h3>
+                <div class="price">$599<span>/mo</span></div>
+                <div class="desc">For growing firms</div>
+                <ul>
+                    <li>40 qualified leads/week</li>
+                    <li>3 cities coverage</li>
+                    <li>2 practice areas</li>
+                    <li>Bi-weekly delivery</li>
+                    <li>Lead scoring & priority ranking</li>
+                    <li>Competitor monitoring</li>
+                </ul>
+                <a href="mailto:hello@leadclaw.shop?subject=Interested in Growth Plan" class="plan-btn plan-btn-primary">Get Started</a>
+            </div>
+            <div class="plan">
+                <h3>Enterprise</h3>
+                <div class="price">$1,499<span>/mo</span></div>
+                <div class="desc">Full pipeline management</div>
+                <ul>
+                    <li>Unlimited leads</li>
+                    <li>Nationwide coverage</li>
+                    <li>All practice areas</li>
+                    <li>Daily delivery</li>
+                    <li>CRM integration</li>
+                    <li>Dedicated account manager</li>
+                    <li>Custom outreach templates</li>
+                </ul>
+                <a href="mailto:hello@leadclaw.shop?subject=Interested in Enterprise Plan" class="plan-btn plan-btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>See Your Leads Before You Pay</h2>
+        <p>We'll generate a free preview with real leads in your area. No commitment.</p>
+        <a href="mailto:hello@leadclaw.shop?subject=I want my free lead preview&body=Hi! I'm interested in seeing a free preview of leads for my business.%0A%0AMy business: %0ACity: %0AWebsite: " class="hero-cta">Get Your Free Preview →</a>
+    </section>
+
+    <footer>
+        &copy; 2026 LeadClaw AI — Leads that convert.<br>
+        <a href="mailto:hello@leadclaw.shop" style="color: #555;">hello@leadclaw.shop</a>
+    </footer>
+</body>
+</html>
