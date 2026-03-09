@@ -6,113 +6,46 @@
     <title>LeadClaw — Real Leads for Stahl William W Inc</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 2px solid #e74c3c;
-        }
-        .header .logo {
-            font-size: 14px; color: #e74c3c; font-weight: 700;
-            letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 40px 20px; text-align: center; border-bottom: 2px solid #e74c3c; }
+        .header .logo { font-size: 14px; color: #e74c3c; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
         .header h1 { font-size: 28px; color: #fff; margin-bottom: 10px; }
         .header h1 span { color: #e74c3c; }
         .header .subtitle { font-size: 16px; color: #8899aa; margin-bottom: 15px; }
-        .header .firm-badge {
-            display: inline-block; background: rgba(231, 76, 60, 0.15);
-            border: 1px solid #e74c3c; color: #e74c3c;
-            padding: 6px 16px; border-radius: 20px; font-size: 13px;
-        }
-        .real-badge {
-            display: inline-block; background: rgba(46, 204, 113, 0.15);
-            border: 1px solid #2ecc71; color: #2ecc71;
-            padding: 6px 16px; border-radius: 20px; font-size: 13px;
-            margin-top: 10px; margin-left: 8px;
-        }
-        .stats {
-            display: flex; justify-content: center; gap: 40px;
-            padding: 25px 20px; background: #111; border-bottom: 1px solid #222;
-        }
+        .header .firm-badge { display: inline-block; background: rgba(231, 76, 60, 0.15); border: 1px solid #e74c3c; color: #e74c3c; padding: 6px 16px; border-radius: 20px; font-size: 13px; }
+        .real-badge { display: inline-block; background: rgba(46, 204, 113, 0.15); border: 1px solid #2ecc71; color: #2ecc71; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-top: 10px; margin-left: 8px; }
+        .stats { display: flex; justify-content: center; gap: 40px; padding: 25px 20px; background: #111; border-bottom: 1px solid #222; }
         .stat { text-align: center; }
         .stat .num { font-size: 28px; font-weight: 700; color: #e74c3c; }
         .stat .label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
         .section { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
-        .section-title {
-            font-size: 20px; color: #fff; margin-bottom: 5px;
-        }
-        .section-desc {
-            font-size: 14px; color: #888; margin-bottom: 20px;
-        }
-        .lead-card {
-            background: #151515; border: 1px solid #2a2a2a; border-radius: 12px;
-            padding: 20px; margin-bottom: 16px; transition: border-color 0.2s;
-        }
+        .section-title { font-size: 20px; color: #fff; margin-bottom: 5px; }
+        .section-desc { font-size: 14px; color: #888; margin-bottom: 20px; }
+        .lead-card { background: #151515; border: 1px solid #2a2a2a; border-radius: 12px; padding: 20px; margin-bottom: 16px; transition: border-color 0.2s; }
         .lead-card:hover { border-color: #e74c3c; }
-        .lead-card.blurred {
-            filter: blur(5px); pointer-events: none; user-select: none;
-        }
-        .lead-header {
-            display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
-        }
-        .lead-number {
-            background: #e74c3c; color: #fff; width: 28px; height: 28px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 13px; font-weight: 700; flex-shrink: 0;
-        }
-        .urgency-badge {
-            padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;
-        }
-        .lead-source {
-            font-size: 12px; color: #888;
-        }
-        .lead-title {
-            font-size: 17px; color: #fff; margin-bottom: 8px;
-        }
-        .lead-context {
-            font-size: 14px; color: #aaa; margin-bottom: 12px;
-        }
-        .lead-meta {
-            display: flex; align-items: center; gap: 8px; font-size: 12px; color: #666; flex-wrap: wrap;
-        }
-        .lead-link {
-            color: #e74c3c; text-decoration: none; font-weight: 600;
-        }
+        .lead-card.blurred { filter: blur(5px); pointer-events: none; user-select: none; }
+        .lead-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+        .lead-number { background: #e74c3c; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+        .urgency-badge { padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .lead-source { font-size: 12px; color: #888; }
+        .lead-title { font-size: 17px; color: #fff; margin-bottom: 8px; }
+        .lead-context { font-size: 14px; color: #aaa; margin-bottom: 12px; }
+        .lead-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .lead-link { color: #e74c3c; text-decoration: none; font-weight: 600; }
         .lead-link:hover { text-decoration: underline; }
-        .cta-section {
-            text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
-            border-top: 1px solid #222;
-        }
+        .sources-bar { display: flex; justify-content: center; gap: 20px; padding: 15px 20px; background: #0d0d0d; border-bottom: 1px solid #1a1a1a; flex-wrap: wrap; }
+        .source-tag { font-size: 12px; color: #666; background: #1a1a1a; padding: 4px 12px; border-radius: 12px; }
+        .cta-section { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%); border-top: 1px solid #222; }
         .cta-section h2 { font-size: 24px; color: #fff; margin-bottom: 10px; }
         .cta-section p { color: #888; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .cta-btn {
-            display: inline-block; background: #e74c3c; color: #fff;
-            padding: 14px 32px; border-radius: 8px; text-decoration: none;
-            font-weight: 700; font-size: 16px; transition: background 0.2s;
-        }
+        .cta-btn { display: inline-block; background: #e74c3c; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; transition: background 0.2s; }
         .cta-btn:hover { background: #c0392b; }
         .cta-note { font-size: 12px; color: #555; margin-top: 15px; }
-        .footer {
-            text-align: center; padding: 20px; color: #444; font-size: 12px;
-            border-top: 1px solid #1a1a1a;
-        }
-        .proof-banner {
-            background: #0d2818; border: 1px solid #2ecc71; border-radius: 8px;
-            padding: 15px 20px; margin-bottom: 20px; text-align: center;
-        }
+        .footer { text-align: center; padding: 20px; color: #444; font-size: 12px; border-top: 1px solid #1a1a1a; }
+        .proof-banner { background: #0d2818; border: 1px solid #2ecc71; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; text-align: center; }
         .proof-banner p { color: #2ecc71; font-size: 14px; }
         .proof-banner strong { color: #fff; }
-        @media (max-width: 600px) {
-            .stats { gap: 20px; }
-            .stat .num { font-size: 22px; }
-            .header h1 { font-size: 22px; }
-        }
+        @media (max-width: 600px) { .stats { gap: 20px; } .stat .num { font-size: 22px; } .header h1 { font-size: 22px; } }
     </style>
 </head>
 <body>
@@ -120,39 +53,34 @@
         <div class="logo">LeadClaw AI</div>
         <h1>Leads Prepared for <span>Stahl William W Inc</span></h1>
         <div class="subtitle">Real people seeking immigration help — scraped this week</div>
-        <div class="firm-badge">🏢 Prepared exclusively for Stahl William W Inc</div>
-        <div class="real-badge">✅ Verified Real Leads</div>
+        <div class="firm-badge">Prepared exclusively for Stahl William W Inc</div>
+        <div class="real-badge">Verified Real Leads</div>
     </div>
-
+    <div class="sources-bar">
+        <span class="source-tag">📍 Reddit (10+ subreddits)</span>
+        <span class="source-tag">💬 Facebook Groups</span>
+        <span class="source-tag">🔍 Legal Forums</span>
+        <span class="source-tag">❓ Quora</span>
+    </div>
     <div class="stats">
-        <div class="stat">
-            <div class="num">3</div>
-            <div class="label">Free Preview Leads</div>
-        </div>
-        <div class="stat">
-            <div class="num">8+</div>
-            <div class="label">Locked Leads</div>
-        </div>
-        <div class="stat">
-            <div class="num">62</div>
-            <div class="label">Total in Database</div>
-        </div>
+        <div class="stat"><div class="num">3</div><div class="label">Free Preview Leads</div></div>
+        <div class="stat"><div class="num">8+</div><div class="label">Locked Leads</div></div>
+        <div class="stat"><div class="num">68</div><div class="label">Total in Database</div></div>
+        <div class="stat"><div class="num">4</div><div class="label">Sources Monitored</div></div>
     </div>
-
     <div class="section">
         <div class="proof-banner">
-            <p>These are <strong>real people</strong> posting on Reddit this month asking for immigration help.<br>
-            Each link is verifiable. Click through to see the original post.</p>
+            <p>These are <strong>real people</strong> posting on Reddit and Facebook this month asking for immigration help.<br>
+            Each link is verifiable — click through to see the original post.</p>
         </div>
-
-        <div class="section-title">🔓 Your Free Preview Leads</div>
-        <div class="section-desc">3 real leads from this week — click the Reddit links to verify</div>
+        <div class="section-title">Your Free Preview Leads</div>
+        <div class="section-desc">3 real leads from this week — click the links to verify</div>
         
         <div class="lead-card">
             <div class="lead-header">
                 <span class="lead-number">#1</span>
                 <span class="urgency-badge" style="background: #ff444420; color: #ff4444; border: 1px solid #ff4444;">🔴 CRITICAL</span>
-                <span class="lead-source">📍 r/h1b</span>
+                <span class="lead-source">📍 Reddit · r/h1b</span>
             </div>
             <h3 class="lead-title">Final H1B attempt, company won't file — Bay Area tech</h3>
             <p class="lead-context">Works in tech Bay Area. Final H1B attempt, employer refuses to file. Previously denied after RFE.</p>
@@ -161,30 +89,30 @@
                 <span>·</span>
                 <span>Posted: This month</span>
                 <span>·</span>
-                <a href="https://www.reddit.com/r/h1b/comments/1remaje/final_h1b_attempt_and_company_wont_file_need/" target="_blank" class="lead-link">View on Reddit →</a>
+                <a href="https://www.reddit.com/r/h1b/comments/1remaje/final_h1b_attempt_and_company_wont_file_need/" target="_blank" class="lead-link">View Original Post →</a>
             </div>
         </div>
         <div class="lead-card">
             <div class="lead-header">
                 <span class="lead-number">#2</span>
                 <span class="urgency-badge" style="background: #ff444420; color: #ff4444; border: 1px solid #ff4444;">🔴 CRITICAL</span>
-                <span class="lead-source">📍 r/h1b</span>
+                <span class="lead-source">💬 Facebook Group · Facebook Group</span>
             </div>
-            <h3 class="lead-title">Looking for NEW lawyer in Bay Area (H1B filing proof)</h3>
-            <p class="lead-context">Doesn't trust current lawyer, explicitly says 'need help finding lawyer in Bay Area'</p>
+            <h3 class="lead-title">Reasonably priced immigration attorney in Bay Area</h3>
+            <p class="lead-context">Bay Area Desi Community group — someone asking for affordable immigration attorney recommendations</p>
             <div class="lead-meta">
-                <span>Category: <strong>H1B</strong></span>
+                <span>Category: <strong>General</strong></span>
                 <span>·</span>
                 <span>Posted: This month</span>
                 <span>·</span>
-                <a href="https://www.reddit.com/r/h1b/comments/1rms9pz/can_we_ask_for_proof_of_h1b_filing_from_our_lawyer/" target="_blank" class="lead-link">View on Reddit →</a>
+                <a href="https://www.facebook.com/groups/bayareadesicommunity/posts/2215232388884461/" target="_blank" class="lead-link">View Original Post →</a>
             </div>
         </div>
         <div class="lead-card">
             <div class="lead-header">
                 <span class="lead-number">#3</span>
                 <span class="urgency-badge" style="background: #ff444420; color: #ff4444; border: 1px solid #ff4444;">🔴 CRITICAL</span>
-                <span class="lead-source">📍 r/h1b</span>
+                <span class="lead-source">📍 Reddit · r/h1b</span>
             </div>
             <h3 class="lead-title">H1b getting deported at POE if petition 2 years old?</h3>
             <p class="lead-context">Organisation says 2yr old H1B petitions getting deported at POE. Panic post.</p>
@@ -193,128 +121,115 @@
                 <span>·</span>
                 <span>Posted: This month</span>
                 <span>·</span>
-                <a href="https://www.reddit.com/r/h1b/comments/1ros191/please_confirm_are_first_time_h1b_getting/" target="_blank" class="lead-link">View on Reddit →</a>
+                <a href="https://www.reddit.com/r/h1b/comments/1ros191/please_confirm_are_first_time_h1b_getting/" target="_blank" class="lead-link">View Original Post →</a>
             </div>
         </div>
-
-        <div class="section-title" style="margin-top: 30px;">🔒 Unlock All Leads</div>
+        <div class="section-title" style="margin-top: 30px;">Unlock All Leads</div>
         <div class="section-desc">8+ more high-intent leads available with a subscription</div>
         
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#4</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">📍 Reddit · r/USCIS</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#5</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">💬 Facebook Group</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#6</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">📍 Reddit · r/h1b</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#7</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">📍 Reddit · r/immigration</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#8</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">💬 Facebook Group</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#9</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">📍 Reddit · r/greencard</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#10</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">📍 Reddit · r/legaladvice</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
         <div class="lead-card blurred">
             <div class="lead-header">
                 <span class="lead-number">#11</span>
                 <span class="urgency-badge" style="background: #ff990020; color: #ff9900; border: 1px solid #ff9900;">🟡 HIGH</span>
+                <span class="lead-source">💬 Facebook Group</span>
             </div>
             <h3 class="lead-title">████████ ████ ██████ ████████ ███</h3>
             <p class="lead-context">████████ ████████ ██████ ████ ████████ ██████████ ████ ████████ ████.</p>
             <div class="lead-meta">
-                <span>Category: ████████</span>
-                <span>·</span>
-                <span>Posted: This month</span>
+                <span>Category: ████████</span><span>·</span><span>Posted: This month</span>
             </div>
         </div>
     </div>
-
     <div class="cta-section">
         <h2>Want the full list?</h2>
-        <p>Get 50+ verified leads per month — real people actively seeking immigration attorneys in your area. Delivered weekly to your inbox.</p>
+        <p>Get 50+ verified leads per month from Reddit, Facebook, legal forums, and Q&A sites. Real people actively seeking immigration attorneys in your area. Delivered weekly.</p>
         <a href="mailto:hello@leadclaw.shop?subject=Unlock%20Leads%20-%20Stahl%20William%20W%20Inc&body=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20LeadClaw%20leads%20for%20my%20firm." class="cta-btn">Unlock All Leads →</a>
         <div class="cta-note">Starting at $299/mo · Cancel anytime · New leads weekly</div>
     </div>
-
-    <div class="footer">
-        LeadClaw AI © 2026 · <a href="https://leadclaw.shop" style="color: #e74c3c;">leadclaw.shop</a>
-    </div>
+    <div class="footer">LeadClaw AI © 2026 · <a href="https://leadclaw.shop" style="color: #e74c3c;">leadclaw.shop</a></div>
 </body>
 </html>
