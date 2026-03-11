@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <linearGradient id="clawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c"/>
+      <stop offset="100%" style="stop-color:#c0392b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Claw icon -->
+  <g transform="translate(15, 12)">
+    <!-- Three claw marks -->
+    <path d="M10 10 Q15 35 8 65" stroke="url(#clawGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M25 5 Q28 35 25 70" stroke="url(#clawGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M40 10 Q35 35 42 65" stroke="url(#clawGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="80" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">
+    Lead<tspan fill="#e74c3c">Claw</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="82" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#888888" letter-spacing="2">
+    AI-POWERED LEAD GENERATION
+  </text>
+</svg>
